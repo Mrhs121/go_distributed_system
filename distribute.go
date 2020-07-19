@@ -85,7 +85,7 @@ func connectToCluster(me NodeInfo, dest NodeInfo) bool {
 	connOut, err := net.DialTimeout("tcp", dest.NodeIpAddr+":"+dest.Port, time.Duration(10)*time.Second)
 	if err != nil {
 		if _, ok := err.(net.Error); ok {
-			fmt.Println("不能连接到集群", me.NodeId)
+			fmt.Println("不能连接到 集群", me.NodeId)
 			return false
 		}
 	} else {
